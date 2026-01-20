@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <style>
+    .box { fill: #f6f8fa; stroke: #333; stroke-width: 1; }
+    .num { font: 16px monospace; text-anchor: middle; dominant-baseline: middle; }
+    .label { font: 14px sans-serif; fill: #222; }
+    .mini { fill: #ffefc6; }
+    .swap { fill: #c6f7ef; }
+    .step { font: 12px sans-serif; fill: #444; }
+  </style>
+
+  <!-- Title -->
+  <text x="20" y="24" class="label" font-size="18" font-weight="bold">Selection Sort — pictorial steps (example: [64,25,12,22,11])</text>
+
+  <!-- Step 0: initial -->
+  <text x="20" y="52" class="step">Step 0 — Initial array</text>
+  <g transform="translate(20,70)">
+    <!-- boxes -->
+    <rect class="box" x="0" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="90" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="180" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="270" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="360" y="0" width="80" height="36" rx="4"/>
+    <!-- numbers -->
+    <text class="num" x="40" y="18">64</text>
+    <text class="num" x="130" y="18">25</text>
+    <text class="num" x="220" y="18">12</text>
+    <text class="num" x="310" y="18">22</text>
+    <text class="num" x="400" y="18">11</text>
+  </g>
+
+  <!-- Step 1: i=0, mini found at index 4 (11) -->
+  <text x="20" y="140" class="step">Step 1 — i=0, mini found at index 4 (11) → swap arr[0] and arr[4]</text>
+  <g transform="translate(20,155)">
+    <rect x="0" y="0" width="80" height="36" rx="4" class="box swap"/>
+    <rect x="90" y="0" width="80" height="36" rx="4" class="box"/>
+    <rect x="180" y="0" width="80" height="36" rx="4" class="box"/>
+    <rect x="270" y="0" width="80" height="36" rx="4" class="box"/>
+    <rect x="360" y="0" width="80" height="36" rx="4" class="box mini"/>
+
+    <text class="num" x="40" y="18">11</text>
+    <text class="num" x="130" y="18">25</text>
+    <text class="num" x="220" y="18">12</text>
+    <text class="num" x="310" y="18">22</text>
+    <text class="num" x="400" y="18">64</text>
+
+    <!-- mini label and arrow -->
+    <text x="400" y="52" class="step">mini = 4</text>
+    <line x1="400" y1="36" x2="400" y2="46" stroke="#222" stroke-width="1" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Step 2: i=1, mini found at index 2 (12) -->
+  <text x="20" y="240" class="step">Step 2 — i=1, mini found at index 2 (12) → swap arr[1] and arr[2]</text>
+  <g transform="translate(20,255)">
+    <rect class="box" x="0" y="0" width="80" height="36" rx="4"/>
+    <rect class="box swap" x="90" y="0" width="80" height="36" rx="4"/>
+    <rect class="box mini" x="180" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="270" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="360" y="0" width="80" height="36" rx="4"/>
+
+    <text class="num" x="40" y="18">11</text>
+    <text class="num" x="130" y="18">12</text>
+    <text class="num" x="220" y="18">25</text>
+    <text class="num" x="310" y="18">22</text>
+    <text class="num" x="400" y="18">64</text>
+
+    <text x="220" y="52" class="step">mini = 2</text>
+    <line x1="220" y1="36" x2="220" y2="46" stroke="#222" stroke-width="1" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Step 3: i=2, mini found at index 3 (22) -->
+  <text x="20" y="340" class="step">Step 3 — i=2, mini found at index 3 (22) → swap arr[2] and arr[3]</text>
+  <g transform="translate(20,355)">
+    <rect class="box" x="0" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="90" y="0" width="80" height="36" rx="4"/>
+    <rect class="box swap" x="180" y="0" width="80" height="36" rx="4"/>
+    <rect class="box mini" x="270" y="0" width="80" height="36" rx="4"/>
+    <rect class="box" x="360" y="0" width="80" height="36" rx="4"/>
+
+    <text class="num" x="40" y="18">11</text>
+    <text class="num" x="130" y="18">12</text>
+    <text class="num" x="220" y="18">22</text>
+    <text class="num" x="310" y="18">25</text>
+    <text class="num" x="400" y="18">64</text>
+
+    <text x="310" y="52" class="step">mini = 3</text>
+    <line x1="310" y1="36" x2="310" y2="46" stroke="#222" stroke-width="1" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" fill="#222" />
+    </marker>
+  </defs>
+
+</svg>
