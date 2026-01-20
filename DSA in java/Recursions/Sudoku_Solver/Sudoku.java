@@ -10,7 +10,14 @@ public class Sudoku {
 
         int r = row - row%3;
         int c = col - col%3;
-        for(int  )
+        for(int i=r; i<3; i++){
+            for(int j=c; j<3; j++){
+                if(board[i][j] == num){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     static boolean solve(int[][] board){
@@ -20,7 +27,7 @@ public class Sudoku {
         for(int i=0; i<n; i++){
             for(int j =0; j<m; j++){
                 if(board[i][j]==0){
-                    for(int num=1; k<=9; k++){
+                    for(int num=1; num<=9; num++){
                         if(isSafe(board,i,j,num)){
                             board[i][j] = num;
 
@@ -38,7 +45,26 @@ public class Sudoku {
         return true;
     }
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+       Scanner sc = new Scanner(System.in);
+        int[][] board = new int[9][9];
+        System.out.println("Enter Your Puzzel Below ....");
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                board[i][j] = sc.nextInt();
+            }
+        }
 
+        if(solve(board)){
+            System.out.println("Puzzel solved.....");
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
+                    System.out.print(board[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }else{
+            System.out.print("Answer does not exist");
+        }
+        sc.close();
     }
 }
