@@ -10,8 +10,8 @@ public class Sudoku {
 
         int r = row - row%3;
         int c = col - col%3;
-        for(int i=r; i<3; i++){
-            for(int j=c; j<3; j++){
+        for(int i=r; i<3+r; i++){
+            for(int j=c; j<3+c; j++){
                 if(board[i][j] == num){
                     return false;
                 }
