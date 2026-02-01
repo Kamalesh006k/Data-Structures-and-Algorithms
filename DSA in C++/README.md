@@ -1,7 +1,7 @@
 #DSA using C++
 ---
 #Contributors
-|Name|Language|department|
-|----|--------|----------|
-|Ganesh|C++|CSE|
-|Kamalesh|Java|EEE|
+|Name|Language|department|College|
+|----|--------|----------|-------|
+|Ganesh|C++|CSE|SKCT|
+|Kamalesh|Java|EEE|SRM EEC|
