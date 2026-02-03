@@ -1,4 +1,5 @@
 // You are using GCC
+// M-Coloring Problem
 #include<bits/stdc++.h>
 using namespace std;
 bool isSafe(int c,int start,vector<vector<int>>&head,vector<int>&res)
