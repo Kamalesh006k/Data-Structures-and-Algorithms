@@ -1,4 +1,6 @@
 // You are using GCC
+
+//sort a stack using recursion
 #include<bits/stdc++.h>
 using namespace std;
 void insertsort(stack<int>&s,int temp)
