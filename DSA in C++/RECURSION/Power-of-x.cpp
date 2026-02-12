@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//power
 double myPow(double x, int n) {
     bool negative = false;
     long long N = n;   
