@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+//credit card finding
 // Function to check Luhn Algorithm
 bool luhnCheck(string cardNumber) {
     int sum = 0;
