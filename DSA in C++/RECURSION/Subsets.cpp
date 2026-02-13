@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//subsets
 void subset1(vector<int>& v, int i, int n, vector<int>& ans, int sum)
 {
     if (i == n)
