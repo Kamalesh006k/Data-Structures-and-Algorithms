@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//Remove Outermost Parentheses: A primitive string is a non-empty string that cannot be partitioned into two non-empty valid parentheses strings. Given a valid parentheses string s, consider its primitive decomposition: s = P_1 + P_2 + ... + P_k, where P_i are primitive valid parentheses strings. Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
 class Solution {
 public:
     string removeOuterParentheses(string s) {
