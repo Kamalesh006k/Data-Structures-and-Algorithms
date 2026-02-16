@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//valid Anagram: two strings are anagrams if they contain the same characters in the same frequency, but not necessarily in the same order.
 class Solution {
 public:
     bool isAnagram(string s, string t) {
