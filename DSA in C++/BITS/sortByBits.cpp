@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+//sort by bits in increasing order, if two numbers have same number of bits then sort by value
 class Solution {
 public:
     vector<int> sortByBits(vector<int>& a) {
