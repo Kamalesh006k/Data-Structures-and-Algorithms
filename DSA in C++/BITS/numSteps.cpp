@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+// Given a binary string s, return the number of steps to reduce it to 1 under the following rules:
 class Solution {
 public:
     int numSteps(string s) {
