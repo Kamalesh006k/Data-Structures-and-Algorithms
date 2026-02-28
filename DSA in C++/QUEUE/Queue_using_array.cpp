@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//data
 int n = 10;
 int q[10];
 int front = -1;
