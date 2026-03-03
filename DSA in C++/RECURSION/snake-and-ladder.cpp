@@ -1,6 +1,7 @@
 // You are using GCC
 #include<bits/stdc++.h>
 using namespace std;
+// Given a snake and ladder board, find the minimum number of dice throws required to reach the destination or last cell from source or 1st cell. The player has total control over the outcome of the dice throw and wants to find out the minimum number of throws required to reach the destination.
 struct cell
 {
     int pos;
