@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// Function to find the index of the second occurrence of a key value in an array
 int findSecond(vector<int>& v, int n, int t, int i, int c)
 {
     if(i >= n)
