@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
 class Solution {
 public:
     void subsets2(vector<vector<int>>& ans, vector<int>& a,
