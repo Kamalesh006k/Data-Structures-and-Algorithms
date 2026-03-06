@@ -1,6 +1,7 @@
 // You are using GCC
 #include<bits/stdc++.h>
 using namespace std;
+// Generate all binary strings of size n such that no two 1's are adjacent.
 void genrateString(int n,vector<string>&v,string &cur)
 {
     if(cur.size()==n)
