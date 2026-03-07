@@ -1,5 +1,6 @@
 // You are using GCC
 #include<bits/stdc++.h>
+// Reverse a stack using recursion
 using namespace std;
 void insertAtBottom(stack<int>&s,int temp)
 {
