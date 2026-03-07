@@ -1,5 +1,6 @@
 // You are using GCC
 #include<bits/stdc++.h>
+// Word Search in a 2D grid using backtracking
 using namespace std;
 int xaxis[]={0,-1,0,1};
 int yaxis[]={-1,0,1,0};
