@@ -4,37 +4,33 @@ using namespace std;
 int main()
 {
     int n;
-    cin >> n;
+    cin>>n;
 
     vector<int> it(n);
-
-    for(int i=0;i<n;i++)
-        cin >> it[i];
-
-    sort(it.begin(),it.end());
+    for(int i=0;i<n;i++) cin>>it[i];
 
     int m;
-    cin >> m;
+    cin>>m;
 
     vector<int> c(m);
+    for(int i=0;i<m;i++) cin>>c[i];
 
-    for(int i=0;i<m;i++)
-        cin >> c[i];
+    sort(it.begin(),it.end());
+    sort(c.begin(),c.end());
 
-    int serc = 0;
+    int i=0,j=0,ans=0;
 
-    for(int i=0;i<m;i++)
+    while(i<n && j<m)
     {
-        for(int j=0;j<n;j++)
+        if(it[i] >= c[j])
         {
-            if(it[j] >= c[i])   // FIXED CONDITION
-            {
-                it[j] = it[j] - c[i];
-                serc++;
-                break;
-            }
+            ans++;
+            i++;
+            j++;
         }
+        else
+            i++;
     }
 
-    cout << "Maximum number of customers served: " << serc;
+    cout<<"Maximum number of customers served: "<<ans;
 }
