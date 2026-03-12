@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// Check if Ones Segment is Present in the Binary String
 class Solution {
 public:
     bool checkOnesSegment(string s) {
