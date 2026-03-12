@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// Find Different Binary String
 class Solution {
 public:
     string findDifferentBinaryString(vector<string>& nums) {
