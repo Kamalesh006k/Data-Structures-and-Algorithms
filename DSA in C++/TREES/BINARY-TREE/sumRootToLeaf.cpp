@@ -3,6 +3,7 @@
 using namespace std;
 // LeetCode: 1022. Sum of Root To Leaf Binary Numbers
 /* Definition for binary tree node */
+// A binary tree node has a value (0 or 1) and two children (left and right).
 struct TreeNode {
     int val;
     TreeNode *left;
