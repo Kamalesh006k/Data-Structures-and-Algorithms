@@ -1,6 +1,6 @@
-// You are using GCC
 #include<bits/stdc++.h>
 using namespace std;
+
 struct node
 {
     int d;
@@ -22,53 +22,58 @@ node* insert(vector<int>&a,int n)
     {
         auto x=q.front();
         q.pop();
+
         if(a[i]!=-1)
         {
             node* left=new node(a[i]);
             x->l=left;
             q.push(left);
         }
+
         i++;
-        if(i<n)
+        if(i<n && a[i]!=-1)
         {
-            if(a[i]!=-1){
             node* right=new node(a[i]);
             x->r=right;
             q.push(right);
-            }
         }
     }
     return root;
 }
 
-void rightSide(node* root,int level,vector<int>&ans)
+bool Symmetric(node* Lroot, node* Rroot)
 {
-        if(root==NULL)
-        {
-            return ;
-        }
-        if(level==(int)ans.size())
-        {
-            ans.push_back(root->d);
-        }
-        rightSide(root->r,level+1,ans);
-        rightSide(root->l,level+1,ans);
+    if(Lroot==NULL && Rroot==NULL)
+        return true;
+
+    if(Lroot==NULL || Rroot==NULL)
+        return false;
+
+    if(Lroot->d != Rroot->d)
+        return false;
+
+    return Symmetric(Lroot->l, Rroot->r) &&
+           Symmetric(Lroot->r, Rroot->l);
 }
+
+bool isSymmetric(node* root)
+{
+    if(root == NULL) return true;
+    return Symmetric(root->l, root->r);
+}
+
 int main()
 {
-    node* root=NULL;
     int n;
     cin>>n;
+
     vector<int>a(n);
     for(int i=0;i<n;i++)
-    {
         cin>>a[i];
-    }
-    root=insert(a,n);
-    vector<int>res;
-    rightSide(root,0,res);
-    for(auto x : res)
-    {
-        cout<<x<<endl;
-    }
+
+    node* root = insert(a,n);
+
+    cout << isSymmetric(root);
+
+    return 0;
 }
